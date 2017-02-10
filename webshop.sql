@@ -53,15 +53,15 @@ DROP TABLE IF EXISTS `Product`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `Product` (
-  `productID` int(11) NOT NULL AUTO_INCREMENT,
+  `productID` int(11) NOT NULL,
   `name` varchar(60) NOT NULL,
   `description` varchar(1000) NOT NULL,
   `imgname` varchar(50) NOT NULL,
   `manufacturer` varchar(50) NOT NULL,
-  `instock` varchar(20) NOT NULL,
+  `instock` int(11) NOT NULL,
   `cost` decimal(10,2) NOT NULL,
   PRIMARY KEY (`productID`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -70,7 +70,7 @@ CREATE TABLE `Product` (
 
 LOCK TABLES `Product` WRITE;
 /*!40000 ALTER TABLE `Product` DISABLE KEYS */;
-INSERT INTO `Product` VALUES (1,'Volvo','A retro Volvo Amazon -69. Still in mint condition!','volvo.jpg','Volvo','1',1000.00),(2,'SAAB','A retro SAAB that needs some tender loving care.','saab.jpg','SAAB','1',10.00),(3,'iPhone','A defective iPhone in need of repair.','iphone.jpg','Apple','1000',250.00),(4,'Boat','A boat in good condition and still floats!','boat.jpg','Unknown','1',1500.00),(5,'Book','Needful Things by Stephen King. Brand new!','2.jpg','Stephen King','3',300.00),(6,'Paper bag','Needful Things branded Paper bag.','1.png','Unknown','100000',100.00);
+INSERT INTO `Product` VALUES (115,'Paper bag','Needful Things branded Paper bag.','1.png','Unknown',100000,100.00),(353,'Volvo','A retro Volvo Amazon -69. Still in mint condition!','volvo.jpg','Volvo',1,100000.00),(385,'SAAB','A retro SAAB that needs some tender loving care.','saab.jpg','SAAB',1,500.00),(421,'Boat','A used boat in good condition that still floats!','boat.jpg','Unknown',1,1500.00),(814,'Book','Needful Things by Stephen King. Brand new!','2.jpg','Stephen King',10,300.00),(902,'iPhone','A defective iPhone in need of repair.','iphone.jpg','Apple',1000,400.00);
 /*!40000 ALTER TABLE `Product` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -83,4 +83,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-02-10 13:40:39
+-- Dump completed on 2017-02-10 18:47:04
