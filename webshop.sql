@@ -31,6 +31,7 @@ CREATE TABLE `Customer` (
   `city` char(30) NOT NULL,
   `email` varchar(50) NOT NULL,
   `phone` varchar(25) NOT NULL,
+  `password` varchar(20) NOT NULL,
   PRIMARY KEY (`customerID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -41,7 +42,7 @@ CREATE TABLE `Customer` (
 
 LOCK TABLES `Customer` WRITE;
 /*!40000 ALTER TABLE `Customer` DISABLE KEYS */;
-INSERT INTO `Customer` VALUES (1,'Sven','Andersson','19571017-7425','testbacken 2','testeborg','sven.tester@helloworld.com','0700001334'),(2,'Anna','Svensson','19850427-7425','testgatan 7','testköping','annatest@helloworld.com','0704572157'),(3,'Kristian','Testström','19120427-7136','testvägen 33','testeå','Krilletest@helloworld.com','07045743673'),(4,'Elsa','Testsson','19781201-5761','teststigen 4','testholm','testerElsa@helloworld.com','0706971482'),(5,'Julia','Testingsson','19920211-4247','testbacken 8','testeborg','juliatesting@helloworld.com','07069831486');
+INSERT INTO `Customer` VALUES (1,'Sven','Andersson','19571017-7425','testbacken 2','testeborg','sven.tester@helloworld.com','0700001334','kalops'),(2,'Anna','Svensson','19850427-7425','testgatan 7','testköping','annatest@helloworld.com','0704572157','uggla'),(3,'Kristian','Testström','19120427-7136','testvägen 33','testeå','Krilletest@helloworld.com','07045743673','honung'),(4,'Elsa','Testsson','19781201-5761','teststigen 4','testholm','testerElsa@helloworld.com','0706971482','aftonbladet'),(5,'Julia','Testingsson','19920211-4247','testbacken 8','testeborg','juliatesting@helloworld.com','07069831486','jordgubbe');
 /*!40000 ALTER TABLE `Customer` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -83,4 +84,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-02-10 18:47:04
+-- Dump completed on 2017-02-12 17:57:24
