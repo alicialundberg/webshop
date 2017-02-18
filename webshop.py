@@ -26,7 +26,7 @@ def signup():
 
         # If firstname email and password has a value:
         if firstname and email and password:
-            conn = MySQLdb.connect(host="192.168.0.101", user='aviato', passwd='siliconvalley', db='webshop', use_unicode=True, charset="utf8")
+            conn = MySQLdb.connect(host="", user='', passwd='', db='webshop', use_unicode=True, charset="utf8")
             cursor = conn.cursor()
             check = cursor.execute('SELECT * FROM Customer WHERE email =%s',(email, ))
 
@@ -54,7 +54,7 @@ def login():
         attempted_password = request.form['password']
 
         if attempted_customer and attempted_password:
-            conn = MySQLdb.connect(host="192.168.0.101", user='aviato', passwd='siliconvalley', db='webshop', use_unicode=True, charset="utf8")
+            conn = MySQLdb.connect(host="", user='', passwd='', db='webshop', use_unicode=True, charset="utf8")
             cursor = conn.cursor()
             customer = cursor.execute('SELECT * FROM Customer WHERE email=%s and password=%s',(attempted_customer,attempted_password ))
 
@@ -75,7 +75,7 @@ def dashboard():
     if 'customer' in session:
        info  = session['customer']
 
-       conn = MySQLdb.connect(host="192.168.0.101", user='aviato', passwd='siliconvalley', db='webshop', use_unicode=True, charset="utf8")
+       conn = MySQLdb.connect(host="", user='', passwd='', db='webshop', use_unicode=True, charset="utf8")
        cursor = conn.cursor()
        cursor.execute('SELECT customer_id,firstname,lastname,ssn,adress,city,email,phone FROM Customer WHERE email=%s',(info, ))
        customer = []
